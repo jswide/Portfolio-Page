@@ -1,0 +1,275 @@
+body {
+  background-color: white;
+}
+#loading-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 9999;
+}
+
+#loading-bar {
+  width: 0%;
+  height: 4px;
+  background-color: #00FF00;
+  transition: width 0.3s;
+}
+
+#loading-progress {
+  margin-top: 10px;
+  color: #00FF00;
+  font-size: 16px;
+}
+
+#matrix {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.letter {
+  position: absolute;
+  color: #00ff00;
+  font-size: 20px;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  filter: invert(100%);
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+html.inverted {
+  filter: invert(100%);
+}
+
+#Triangle {
+  transition: transform 0.5s;
+  padding: 15px 20px;
+  color: white;
+  transform: rotate(180deg);
+  background: linear-gradient(to right, white 50%, white 50%);
+}
+
+.btn-theme {
+  transition: transform 0.5s;
+  background-color: white;
+  padding: 0px 6px;
+  border: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  font-family: Helvetica;
+}
+
+.btn-theme__icon {
+  margin-right: 10px;
+}
+
+.beam {
+  animation: beamEffect 1.5s infinite;
+}
+
+@keyframes beamEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.logo-wrapper__title {
+  position: absolute;
+  top: 40px;
+  right: -80px;
+  transform: rotate(-90deg);
+  font-size: 10px;
+  font-family: Helvetica;
+}
+
+.logo-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  background-image: url("https://www.pngkey.com/png/full/522-5227440_javascript-icon-graphic-design.png");
+  background-size: cover;
+  transform: translate(50%, -50%);
+  animation: flip-horizontal 2s linear infinite, hover 2s linear infinite;
+}
+
+@keyframes flip-horizontal {
+  0% {
+    transform: translate(50%, -50%) scaleX(-1);
+  }
+  100% {
+    transform: translate(50%, -50%) scaleX(1);
+  }
+}
+
+@keyframes hover {
+  0%,
+  100% {
+    transform: translate(50%, -50%);
+  }
+  50% {
+    transform: translate(50%, -55%);
+  }
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background-color: black;
+}
+
+main {
+  background-color: #000000;
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+#languages-container {
+  border: 2px solid #ffffff;
+  padding: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#languages-container p {
+  color: #00cc00;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing-text 4s steps(40) infinite;
+  animation-fill-mode: both;
+}
+
+@keyframes typing-text {
+  0% {
+    width: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    width: 100%;
+    opacity: 0;
+  }
+}
+
+#javascript {
+  position: relative;
+}
+
+#javascript::after {
+  content: "|";
+  position: absolute;
+  right: 0;
+  opacity: 0;
+  animation: cursor-blink 1s infinite;
+}
+
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#languages-heading {
+  color: white;
+}
+
+#projects-heading {
+  color: white;
+  background-color: black;
+  padding: 10px;
+}
+
+.name {
+  text-align: center;
+  margin-top: -60px;
+  font-family: "Halvetica", sans-serif;
+}
+
+.front {
+  text-align: center;
+  margin: 0 auto;
+  font-family: "Halvetica", sans-serif;
+  font-size: 20px;
+}
+
+#cert {
+  color: white;
+  background-color: black;
+  padding: 10px;
+}
+
+#certi,
+#workExp,
+#Data,
+#psych,
+#MBA,
+#project
+{
+  color: #00cc00;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing-text 4s steps(40) 1;
+  animation-fill-mode: both;
+}
+
+@keyframes typing-text {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
